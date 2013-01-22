@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onigiri - simple & delicious web storage</title>
+    <!-- html5 -->
+    <!--[if lt IE 9]>
+        <script src="./includes/html5.js"></script>
+    <![endif]-->
+    <link href="./includes/html5.css" rel="stylesheet"/>
+
+    <!-- main style sheet -->
+    <link href="./includes/style.css" rel="stylesheet"/>
+
+    <!-- jquery -->
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <!-- onigiri -->
+    <script src="../lib/onigiri.db.min.js"></script>
+</head>
+<body>
+
+    <script>
+        $(function() {
+            onigiri.db.set('my');
+            refreshUserList();
+
+            $('.button.delete').click(function(){
+                onigiri.db.clear();
+
+                refreshUserList();
+            });
+
+            $('.button.add').click(function(){
+
+                onigiri.db.save('users', [{
+                    name: $('#txtName').val(),
+                    age: $('#txtAge').val()
+                }]);
+
+                $('input').val('');
+                refreshUserList();
+            });
+        });
+
+        function refreshUserList() {
+            users = db.find('users');
+            $('#userList tbody').empty();
+            for (id in users) {
+                user = users[id];
+                userHtml = '<tr><td>' + user.name + '</td><td>' + user.age + '</td></tr>';
+                $('#userList tbody').append(userHtml);
+            }
+            if (users.length == 0) {
+                userHtml = '<tr><td class="noData" colspan="2">no data</td></tr>';
+                $('#userList tbody').append(userHtml);
+            }
+        }
+    </script>
+
+    <section class="page">
+
+        <img class="logo" src="./includes/logo.png">
+
+        <h1>User list</h1>
+        <input id="txtName" class="input" type="text" placeholder="Name">
+        <input id="txtAge" class="input" type="text" placeholder="Age">
+        <a class="button add" id="btnAdd">add</a>
+        <table id="userList" class="dataList">
+            <thead>
+                <tr>
+                    <th width="50%">Name</th><th width="50%">Age</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <a class="button delete" id="btnClear">clear all</a>
+
+    </section>
+
+</body>
+</html>

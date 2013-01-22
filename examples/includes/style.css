@@ -1,0 +1,162 @@
+@charset "UTF-8";
+
+@import 'AveriaLibre.css';
+
+body {
+    margin: 0;
+    padding: 0;
+    font: normal 75% Helvetica, Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+a {
+    color: #4ae;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* general classes */
+
+.clear {
+    clear:both;
+}
+
+h1,
+.onigiri {
+    font-family: 'AveriaLibre';
+}
+
+.logo {
+    display: block;
+    margin: 10px 0;
+}
+
+.page {
+    width: 700px;
+    margin: 10px auto;
+    border: 1px #ddd solid;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.dataList {
+    font-size: 1em;
+    min-width: 600px;
+    margin: 10px 0;
+    border: 1px #f5f5f5 solid;
+}
+
+.dataList tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+.dataList tr:nth-child(even) {
+    background-color: #fff;
+}
+
+.dataList td,
+.dataList th {
+    padding: 10px 20px;
+}
+
+.dataList th {
+    background-color: #555;
+    color: #fff;
+}
+
+.dataList .noData {
+    font-style: italic;
+    text-align: center;
+}
+
+/* buttons */
+
+.input {
+    font: normal 12px Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    padding: 7px 12px;
+    position: relative;
+    display: inline-block;
+    -webkit-transition: border-color .318s;
+    -moz-transition: border .318s;
+    -o-transition: border-color .318s;
+    transition: border-color .318s;
+    background: #fff;
+    border: solid 1px #dcdcdc;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    margin-right: 10px;
+}
+
+.input:hover {
+    border: solid 1px #aaa;
+}
+
+::-webkit-input-placeholder {
+    color: #bbb;
+}
+:-moz-placeholder {
+    color: #bbb;
+}
+::-moz-placeholder {
+    color: #bbb;
+}
+:-ms-input-placeholder {
+    color: #bbb;
+}
+
+a.button {
+    cursor: pointer;
+    color: #6e6e6e;
+    font: bold 12px Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    padding: 7px 12px;
+    position: relative;
+    display: inline-block;
+    text-shadow: 0 1px 0 #fff;
+    -webkit-transition: border-color .218s;
+    -moz-transition: border .218s;
+    -o-transition: border-color .218s;
+    transition: border-color .218s;
+    background: #f3f3f3;
+    background: -webkit-gradient(linear,0% 40%,0% 70%,from(#F5F5F5),to(#F1F1F1));
+    background: -moz-linear-gradient(linear,0% 40%,0% 70%,from(#F5F5F5),to(#F1F1F1));
+    border: solid 1px #dcdcdc;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    margin-right: 10px;
+}
+
+a.button:hover {
+    color: #333;
+    border-color: #999;
+    -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow:0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+a.button:active {
+    color: #000;
+    border-color: #444;
+}
+a.button.save {
+    background: url(icons.png) 10px 7px no-repeat #f3f3f3;
+    padding-left: 30px;
+}
+a.button.add {
+    background: url(icons.png)  10px -27px no-repeat #f3f3f3;
+    padding-left: 30px;
+}
+a.button.delete {
+    background: url(icons.png)  10px -61px no-repeat #f3f3f3;
+    padding-left: 30px;
+}
