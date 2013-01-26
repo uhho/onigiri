@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-@import 'AveriaLibre.css';
-
 body {
     margin: 0;
     padding: 0;
@@ -31,12 +29,23 @@ a:hover {
 
 h1,
 .onigiri {
-    font-family: 'AveriaLibre';
+    font-family: Calibri, Helvetica, Arial, sans-serif;
+    font-weight: normal;
 }
 
-.logo {
+hr {
     display: block;
-    margin: 10px 0;
+    margin: 20px 0;
+    border: none;
+    border-bottom: 1px #eee solid;
+    background: none;
+    height: 1px;
+    width: 100%;
+}
+
+footer {
+    color: #aaa;
+    text-align: right;
 }
 
 .page {
@@ -49,7 +58,7 @@ h1,
 
 .dataList {
     font-size: 1em;
-    min-width: 600px;
+    width: 100%;
     margin: 10px 0;
     border: 1px #f5f5f5 solid;
 }

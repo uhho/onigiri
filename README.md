@@ -22,7 +22,7 @@ Learn more about WebStorage at <http://en.wikipedia.org/wiki/Web_storage/>.
 Saving data
 ```js
 // first you have to set name for you database
-var db = onigiri.db.set('my-db);
+var db = onigiri.db.set('my-db');
 
 // now you can save some settings
 db.save('settings', [
@@ -50,7 +50,7 @@ db.save('users', [
 Reading data
 ```js
 // set name for you database
-var db = onigiri.db.set('my-db);
+var db = onigiri.db.set('my-db');
 
 // save data and read by id
 db.save('settings', [
@@ -82,7 +82,7 @@ console.log(users);
 Updating data
 ```js
 // set name for you database
-var db = onigiri.db.set('my-db);
+var db = onigiri.db.set('my-db');
 
 db.save('users', [
     {
@@ -108,7 +108,7 @@ db.save('users', [ john ]);
 Removing data
 ```js
 // set name for you database
-var db = onigiri.db.set('my-db);
+var db = onigiri.db.set('my-db');
 
 // remove user
 db.remove('users', 1234);
