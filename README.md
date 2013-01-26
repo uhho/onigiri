@@ -3,13 +3,15 @@ Web Storage JS library  - simple & delicious
 
 With Onigiri you can:
 
-- save any kind of data directly on user browser
-- keep data for looong time (WebStorage is not cleaned after user closes browser)
+- create and manage database directly on user browser
+- create, update, delete and search records in database
+- keep data for a looong time (WebStorage is not cleaned after user closes browser)
 - exchange information between browser tabs
 - and many, many more...
 
 Onigiri is a lightweight library : 1,2KB.
 
+Onigiri is extending basic API of WebStorage giving you more natural approach to managing database on user side.
 Learn more about WebStorage at <http://en.wikipedia.org/wiki/Web_storage/>.
 
 ## Instalation ##
@@ -129,3 +131,8 @@ db.remove('users', 1234);
 - Safari 4.0
 - Android 2.1
 - iOS 3.2
+
+## License ##
+
+Software is licensed under MIT license.
+For more information check LICENSE file.
