@@ -117,6 +117,21 @@ db.remove('users', 1234);
 
 ```
 
+Using onUpdate event
+```js
+// set name for you database
+var db = onigiri.db({
+    name: 'my-db',
+    onUpdate: function(data) {
+        console.log(data);
+    }
+});
+
+// from now, after any kind of operation on database,
+// update event will be broadcasted to all application instances (tabs, windows, etc.)
+
+```
+
 ## Future releases ##
 
 - more complex find conditions

@@ -15,24 +15,31 @@
     <!-- jquery -->
     <script src="http://code.jquery.com/jquery.min.js"></script>
     <!-- onigiri -->
-    <script src="../lib/onigiri.db.min.js"></script>
+    <script src="../lib/onigiri.db.js"></script>
 </head>
 <body>
 
     <script>
+        var db;
+
         $(function() {
-            onigiri.db.set('my');
+
+            db = new onigiri.db({
+                name: 'my',
+                onUpdate: function(storageEvent) {
+                    console.log('data updated', storageEvent);
+                }
+            });
+            
             refreshUserList();
 
             $('.button.delete').click(function(){
-                onigiri.db.clear();
-
+                db.clear();
                 refreshUserList();
             });
 
             $('.button.add').click(function(){
-
-                onigiri.db.save('users', [{
+                db.save('users', [{
                     name: $('#txtName').val(),
                     age: $('#txtAge').val()
                 }]);
