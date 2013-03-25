@@ -80,6 +80,16 @@ users = db.find('users', {
 
 // users will contain John and Marry
 console.log(users);
+
+// select first match element
+var firstUser = db.find('users', {
+    age: 25
+}, "first");
+
+// select first match element
+var lastUser = db.find('users', {
+    age: 25
+}, "last");
 ```
 
 Updating data
@@ -153,6 +163,10 @@ var db = onigiri.db({
     $ brew install phantomjs
     $ npm install
     $ npm test
+
+## Minify
+
+    $ grunt
 
 ## License ##
 
