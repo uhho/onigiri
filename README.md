@@ -1,4 +1,5 @@
-# onigiri #
+# onigiri [![Build Status](https://secure.travis-ci.org/hotchemi/onigiri.png)](http://travis-ci.org/hotchemi/onigiri)
+
 Web Storage JS library  - simple & delicious
 
 With Onigiri you can:
@@ -79,6 +80,16 @@ users = db.find('users', {
 
 // users will contain John and Marry
 console.log(users);
+
+// select first match element
+var firstUser = db.find('users', {
+    age: 25
+}, "first");
+
+// select first match element
+var lastUser = db.find('users', {
+    age: 25
+}, "last");
 ```
 
 Updating data
@@ -146,6 +157,16 @@ var db = onigiri.db({
 - Safari 4.0
 - Android 2.1
 - iOS 3.2
+
+## Tests
+
+    $ brew install phantomjs
+    $ npm install
+    $ npm test
+
+## Minify
+
+    $ grunt
 
 ## License ##
 
